@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
             </button>
             <div className="relative w-full aspect-video">
               <iframe
-                src="https://drive.google.com/file/d/1I2MIzlAnAcAXLuj2v60qLhYAWBsx1A9baYockYNWwbA/preview"
+                src="https://drive.google.com/file/d/1GvXctXZrpN6o9t2EY1hejqWsh6d4N13Y/preview"
                 className="absolute inset-0 w-full h-full border-0"
                 allow="autoplay"
                 allowFullScreen
