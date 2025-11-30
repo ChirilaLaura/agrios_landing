@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
           onClick={() => setIsVideoModalOpen(false)}
         >
           <div 
-            className="relative bg-white rounded-2xl shadow-2xl max-w-5xl w-full overflow-hidden"
+            className="relative bg-black rounded-2xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -24,10 +24,10 @@ export const Hero: React.FC = () => {
             >
               <X className="w-6 h-6" />
             </button>
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <div className="relative w-full aspect-video">
               <iframe
                 src="https://drive.google.com/file/d/1I2MIzlAnAcAXLuj2v60qLhYAWBsx1A9baYockYNWwbA/preview"
-                className="absolute inset-0 w-full h-full"
+                className="absolute inset-0 w-full h-full border-0"
                 allow="autoplay"
                 allowFullScreen
               />
@@ -36,9 +36,8 @@ export const Hero: React.FC = () => {
         </div>
       )}
 
-    {/* Hero Section */}
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">(
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-agri-50 via-white to-white opacity-70"></div>
       
