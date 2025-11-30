@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
                    <span className="text-xl font-bold text-slate-900">{APP_NAME}</span>
                 </div>
                 <p className="text-slate-500 mb-6 max-w-sm">
-                    Agricultural Robotics Operating System. A senior design project revolutionizing autonomous farming through modular software architecture.
+                    Agricultural Robotics Orchestrating System. A senior design project revolutionizing autonomous farming through modular software architecture.
                 </p>
             </div>
             
