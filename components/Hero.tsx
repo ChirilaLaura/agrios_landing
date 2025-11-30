@@ -1,10 +1,43 @@
-import React from 'react';
-import { ArrowRight, PlayCircle, Cpu, Bot, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, PlayCircle, Cpu, Bot, Sparkles, X } from 'lucide-react';
 import { SimulationCanvas } from './SimulationCanvas';
 import { TAGLINE, SUB_TAGLINE } from '../constants';
 
 export const Hero: React.FC = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   return (
+    <>
+      {/* Video Modal */}
+      {isVideoModalOpen && (
+        <div 
+          className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setIsVideoModalOpen(false)}
+        >
+          <div 
+            className="relative bg-white rounded-2xl shadow-2xl max-w-5xl w-full overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsVideoModalOpen(false)}
+              className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://drive.google.com/file/d/1I2MIzlAnAcAXLuj2v60qLhYAWBsx1A9baYockYNWwbA/preview"
+                className="absolute inset-0 w-full h-full"
+                allow="autoplay"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+    {/* Hero Section */}
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">(
     <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-agri-50 via-white to-white opacity-70"></div>
@@ -39,7 +72,7 @@ export const Hero: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button 
-                onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => setIsVideoModalOpen(true)}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 rounded-xl font-semibold transition-all hover:shadow-lg"
               >
                 <PlayCircle className="w-5 h-5 text-agri-600" />
@@ -82,5 +115,6 @@ export const Hero: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
