@@ -218,13 +218,13 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Laura",
     role: "Frontend & Integration",
-    description: "Simulation visualization (SwarmJS & Canvas), plugin management system with AI generation, task-based multi-robot UI, dashboard components",
+    description: "Simulation visualization, plugin management system with AI generation, task-based multi-robot UI, dashboard components",
     initial: "L"
   },
   {
     name: "James",
     role: "Backend & Algorithms",
-    description: "Pathfinding (Dijkstra's), task distribution (Voronoi/Lloyd's, Hungarian), TaskManager, multi-robot coordination, concurrent logger",
+    description: "Pathfinding (Dijkstra's), multi-algorithm task distribution (Greedy, Hungarian approximation, Balanced makespan), TaskManager, multi-robot coordination, concurrent logger",
     initial: "J"
   },
   {
