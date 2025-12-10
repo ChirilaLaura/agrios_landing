@@ -1,11 +1,11 @@
 
-import { 
-  Map, 
-  Bot, 
-  MousePointer2, 
-  Cpu, 
-  Plug, 
-  Play, 
+import {
+  Map,
+  Bot,
+  MousePointer2,
+  Cpu,
+  Plug,
+  Play,
   Satellite,
   Code2,
   Globe,
@@ -15,7 +15,8 @@ import {
   Lightbulb,
   Heart,
   CheckCircle,
-  Layout
+  Layout,
+  Scan
 } from "lucide-react";
 import { Feature, TeamMember, TechStackItem, WorkflowStep, ImpactItem, MetricItem } from "./types";
 
@@ -87,6 +88,17 @@ export const FEATURES: Feature[] = [
       "Playback controls",
       "Path analysis",
       "Real-time feedback"
+    ]
+  },
+  {
+    title: "AI Image Segmentation",
+    description: "Automatically detect obstacles from satellite imagery using computer vision. OpenCV-powered segmentation identifies buildings, water, and terrain.",
+    icon: Scan,
+    details: [
+      "Automated obstacle detection",
+      "OpenCV semantic segmentation",
+      "Grid generation from imagery",
+      "Optional manual override"
     ]
   }
 ];
@@ -190,7 +202,7 @@ export const EVALUATION_METRICS: MetricItem[] = [
   },
   {
     title: "Implementation Quality",
-    description: "Production-ready codebase with clean architecture and comprehensive API"
+    description: "Research-grade prototype with production-quality architecture and comprehensive API"
   },
   {
     title: "Scalability",

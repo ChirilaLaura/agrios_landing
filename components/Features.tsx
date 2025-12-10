@@ -15,9 +15,9 @@ export const Features: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {FEATURES.map((feature, idx) => (
-            <div 
-              key={idx} 
-              className="group bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:border-agri-200 transition-all duration-300"
+            <div
+              key={idx}
+              className={`group bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:border-agri-200 transition-all duration-300 ${idx === FEATURES.length - 1 ? 'lg:col-start-2' : ''}`}
             >
               <div className="w-14 h-14 bg-agri-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-agri-600 transition-colors">
                 <feature.icon className="w-7 h-7 text-agri-600 group-hover:text-white transition-colors" />
